@@ -1,0 +1,41 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colors";
+
+.header{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    }
+    
+  
+
+    .nickname-and-time-container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        width: 140px;
+        height:100%;
+        margin-left:5px;
+    }
+    
+    .nickname{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        margin-bottom:3px;  
+    }
+    
+    .date{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.05em;
+        color: $dark-grey;
+    }
+
+
+        

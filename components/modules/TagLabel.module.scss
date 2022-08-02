@@ -1,0 +1,35 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colors";
+
+.tag-wrapper{
+display:flex;
+justify-content: center;
+align-items:center;
+height:80%;
+margin-right:3px;
+padding: 2px 3px;
+background-color: $grey;
+border-radius: 5px;
+
+
+@include md{
+    height:22px;
+    padding: 5px 10px;
+
+}
+}
+
+.tag-name{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 8px;
+    line-height:8px;
+    letter-spacing: 0.05em;    
+    color: $dark-grey;
+
+    @include md{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+}
