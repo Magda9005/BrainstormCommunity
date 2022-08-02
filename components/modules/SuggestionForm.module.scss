@@ -1,96 +1,93 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px 5px;
-    gap: 10px;
-    width: 100%;
-    // height: 80px;    
-    background: #FFFFFF;    
-    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px 5px;
+  gap: 10px;
+  width: 100%;
+  // height: 80px;
+  background: #ffffff;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
 
- 
-    @include lg{
-        // height: 143px; 
-        padding: 30px 40px;
-    
-    }
+  @include lg {
+    // height: 143px;
+    padding: 30px 40px;
+  }
 }
 
-.suggestion-textfield{
-width: 100%;
-// height: 50%;
-border: 2px solid $grey;
-border-radius: 5px;
-outline-color: $orange;
+.suggestion-textfield {
+  width: 100%;
+  // height: 50%;
+  border: 2px solid $grey;
+  border-radius: 5px;
+  outline-color: $orange;
 
-@include md{
+  @include md {
     // width:490px;
-    height:100px;
-}
-@include lg{
+    height: 100px;
+  }
+  @include lg {
     // width: 640px;
-    height:60px;
-  
-}
+    height: 60px;
+  }
 }
 
-.suggestion-textfield::placeholder{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 9px;
-    line-height: 9px;
-    display: flex;
-    align-items: center;
+.suggestion-textfield::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 9px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: $dark-grey;
+
+  @include md {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.suggest-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 4px;
+  margin-top: 10px;
+  width: 70px;
+  height: 20px;
+  background: $orange;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  @include md {
+    width: 112px;
+    height: 30px;
+    padding: 12px 20px;
+    margin-top: 30px;
+  }
+}
+
+.suggest-icon-wrapper {
+  width: 13px;
+  height: 13px;
+}
+.suggest {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 9px;
+  color: #ffffff;
+
+  @include md {
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.02em;
-    color: $dark-grey;  
-
-    @include md{
-        font-size: 12px;
-        line-height: 14px;
-    }
-}
-
-.suggest-button{
-display:flex;
-flex-direction:row;
-align-items: center;
-padding: 2px 4px;
-margin-top:10px;
-width: 70px;
-height: 20px;
-background: $orange;
-border-radius: 5px;
-border:none;
-cursor:pointer;
-
-@include md{
-width: 112px;
-height: 30px;
-padding: 12px 20px;
-margin-top:30px;
-}
-}
-
-.suggest-icon-wrapper{
-    width: 13px;
-    height: 13px;
-}
-.suggest{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 9px;
-    line-height: 9px;
-    color: #FFFFFF; 
-    
-    @include md{
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.02em;
-    }
+  }
 }

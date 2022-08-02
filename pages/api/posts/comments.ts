@@ -7,52 +7,42 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-const {postId,author,content,avatar}=req.body
-
-
+    const { postId, author, content, avatar } = req.body;
 
     const commentsCountUpdate = await prisma.post.update({
       where: {
-        id:Number(postId)
+        id: Number(postId),
       },
-      data:{
-        commentsCount:{
-          increment:1,
-        }
-      }
-     }
-     );
+      data: {
+        commentsCount: {
+          increment: 1,
+        },
+      },
+    });
 
     await prisma.comment.create({
       data: {
         content: content,
         author: author,
-        authorImage:avatar,
-        post:{
-          connect:{
-              id: postId,
-          }
-        }
+        authorImage: avatar,
+        post: {
+          connect: {
+            id: postId,
+          },
+        },
       },
     });
-
-    
 
     return res.json(commentsCountUpdate);
   }
 
-  
   if (req.method === "GET") {
-   
-    const allPosts= await prisma.post.findMany({
-      include:{
-        comments:true,
-      }
+    const allPosts = await prisma.post.findMany({
+      include: {
+        comments: true,
+      },
     });
 
     return res.json(allPosts);
-
-
   }
-
 }

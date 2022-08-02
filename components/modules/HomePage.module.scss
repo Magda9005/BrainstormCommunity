@@ -1,107 +1,100 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.home-page-container{
-display:flex;
-flex-direction:rows;
-width: 100%;
-height:100vh;
+.home-page-container {
+  display: flex;
+  flex-direction: rows;
+  width: 100%;
+  height: 100vh;
 }
-      
-.login-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width:45%;
-    padding:100px 10px;
 
-    @include lg{
-    width:40%;
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+  padding: 100px 10px;
+
+  @include lg {
+    width: 40%;
     padding: 193px 100px;
     gap: 20px;
-
   }
+}
+
+.header {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #000000;
+
+  @include sm {
+    font-size: 18px;
+    line-height: 24px;
   }
 
-    .header{
-      font-family: 'Roboto';
-      font-weight: 900;
-      font-size: 14px;
-      line-height:20px;
-      letter-spacing:0.05em;
-      text-transform: capitalize;
-      color: #000000;
-
-
-      @include sm{
-        font-size:18px;
-        line-height:24px;
-      }
-
-      @include lg{
-      font-size: 24px;
-      line-height: 28px;
-      }
-    }
-
-    .welcome-text{
-      font-family: 'Roboto';
-      font-weight: 300;
-      font-size: 14px;
-line-height:20px;
-      letter-spacing: 0.05em;
-      color: #000000;
-
-   
-
-@include sm{
-  font-size:16px;
-  line-height:22px;
+  @include lg {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
-@include lg{
-  font-size: 18px;
-  line-height: 30px;
+
+.welcome-text {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  color: #000000;
+
+  @include sm {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include lg {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
-      }
-  
- 
-      .login-button{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      width:100%;
-      height:30px;
-      background: $orange;
-      border:none;
-      border-radius: 5px;
-      font-family: 'Roboto';
-      font-weight: 900;
-      font-size: 13px;
-      color: #FFFFFF;
-      margin-top:10px;
-      cursor:pointer;
 
-      @include sm{
-        height:30px;
-        margin-top:20px;
-        font-size:15px;
-      }
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background: $orange;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 10px;
+  cursor: pointer;
 
-      @include lg{
-      height: 38px;
-      }
-      }
+  @include sm {
+    height: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
 
-      .image-wrapper{
-      width:55%;
-      margin-left:10px;
-      background: url('../../public/aa28b65b5f158c77f988d64aa6790913.jpeg');
-      background-position:center;
-      background-size:cover;
+  @include lg {
+    height: 38px;
+  }
+}
 
-      @include lg{
-        width:60%;
-      }
-      }
+.image-wrapper {
+  width: 55%;
+  margin-left: 10px;
+  background: url("../../public/aa28b65b5f158c77f988d64aa6790913.jpeg");
+  background-position: center;
+  background-size: cover;
 
-  
+  @include lg {
+    width: 60%;
+  }
+}

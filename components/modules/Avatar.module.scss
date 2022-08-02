@@ -1,27 +1,27 @@
 @import "../../styles/breakpoints";
 
-.avatar-wrapper{
-    position:relative;
-    width: 30px;
-    height: 30px;
-    border-radius:50%;
-    overflow:hidden;
-    
-    @include md{
+.avatar-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include md {
     width: 40px;
     height: 40px;
-    }
+  }
 }
 
-.avatar-wrapper-open-question{
-    position:relative;
-    width: 30px;
-    height: 30px;
-    border-radius:50%;
-    overflow:hidden;
+.avatar-wrapper-open-question {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
 
-    @include md{
+  @include md {
     width: 150px;
     height: 150px;
-    }
+  }
 }

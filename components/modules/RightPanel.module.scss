@@ -1,169 +1,157 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.right-panel-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:200px;
-    margin-top:10px ;
-    margin-right:5px;
-    padding: 5px 10px;
-    background: #FFFFFF;
-    border: 1px solid $grey;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    
-    @include lg{
-        width: 270px;
-        height: 308px;
-        margin-top:15px ;
-        margin-right:15px;
-        padding: 10px 20px;
-        
-       
-    }
+.right-panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  background: #ffffff;
+  border: 1px solid $grey;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+
+  @include lg {
+    width: 270px;
+    height: 308px;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 10px 20px;
+  }
 }
 
-.must-read-container,.featured-links-container{
-    width: 200px;
-    gap: 10px;
-margin-top:15px;
+.must-read-container,
+.featured-links-container {
+  width: 200px;
+  gap: 10px;
+  margin-top: 15px;
 
-@include lg{
+  @include lg {
     width: 230px;
-}
-}
-
-.featured-links-container{
-    margin-top:30px;
+  }
 }
 
-.title-wrapper{
-    display:flex;
-    flex-direction:row;
-    width: 230px;
-    height: 28px;
-    border-bottom:1px solid $grey;
+.featured-links-container {
+  margin-top: 30px;
 }
 
-.icon-wrapper{
-    width: 18px;
-    height: 18px;
-    margin-right:5px;
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 230px;
+  height: 28px;
+  border-bottom: 1px solid $grey;
 }
 
-.must-read-title,.featured-links-title{
-font-family: 'Roboto';
-font-weight: 400;
-font-size: 13px;
-line-height: 15px;
-letter-spacing: 0.05em;
-color: #000000;
-
+.icon-wrapper {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
 }
 
-.links-container{
-  display:flex;
-  flex-direction:column;
+.must-read-title,
+.featured-links-title {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: #000000;
 }
 
-
-.link{
-font-family: 'Roboto';
-font-weight: 400;
-font-size: 11px;
-line-height: 17px;
-letter-spacing: 0.03em;
-color: $link-color;
-margin:5px;
-cursor:pointer;
+.links-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.hash{
-    width: 17px;
-    font-family: 'Roboto';
-    font-weight: 900;
+.link {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  color: $link-color;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hash {
+  width: 17px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  color: $link-color;
+  margin: 3px;
+}
+
+.link-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+
+  letter-spacing: 0.05em;
+  color: #000000;
+  border-bottom: 1px solid $grey;
+
+  @include md {
     font-size: 18px;
-    line-height: 17px;
-    letter-spacing: 0.03em;
-    color: $link-color;
-    margin:3px;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
 }
 
-.link-wrapper{
-    display:flex;
-    flex-direction: row;
-    
+.posts-quantity-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  border-bottom: 1px solid $grey;
 }
 
-.author{
- display: flex;
-    justify-content: center;
-width: 100%;
-padding-bottom:5px;
-margin-top:15px;
-margin-bottom:10px;
-font-family: 'Roboto';
-font-weight: 700;
-font-size: 12px;
-line-height: 12px;
-
-letter-spacing: 0.05em;
-color: #000000;
-border-bottom:1px solid $grey;
-
-
-@include md{
-    font-size: 18px;
-    line-height: 21px; 
-    padding-bottom:10px;
-
-}
+.sparkles-icon-wrapper {
+  width: 14px;
+  height: 14px;
+  @include md {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.posts-quantity-container{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding-bottom:10px;
-    margin-top:0px;
-    border-bottom:1px solid $grey;
+.posts-amount {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin-left: 3px;
+  color: $orange;
 
-    
-}
-
-.sparkles-icon-wrapper{
-    width: 14px;
-    height: 14px;
-    @include md{
-        width: 24px;
-        height: 24px; 
-    }
-   
-}
-
-.posts-amount{
-
-font-family: 'Roboto';
-font-weight: 400;
-font-size: 14px;
-letter-spacing: 0.02em;
-margin-left:3px;
-color: $orange;
-
-@include md{
+  @include md {
     font-size: 22px;
- 
-}
-}
-
-
-.github-icon-wrapper{
-    width: 18px;
-    height: 18px;
-    margin-top:15px;
-    cursor:pointer;
+  }
 }
 
+.github-icon-wrapper {
+  width: 18px;
+  height: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+}
