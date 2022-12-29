@@ -16,11 +16,11 @@ const SignIn: NextPage<SignInProps> = ({ providers }) => {
   return (
     <>
       <Navbar userLoggedIn={null} />
-      <div className={styles["container"]}>
+      <div className={styles.container}>
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>
             <button
-              className={styles["signin-button"]}
+              className={styles.signinButton}
               onClick={() =>
                 signIn("github", {
                   callbackUrl: "http://localhost:3000/questions",

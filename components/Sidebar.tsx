@@ -22,26 +22,26 @@ const Sidebar: React.FC<SidebarProps> = ({
   const [hoveredItem, setHoveredItem] = useState("");
 
   return (
-    <div className={styles["sidebar-container"]}>
+    <div className={styles.sidebarContainer}>
       <Search
         value={value}
         onChange={onChange}
         onSubmit={onSubmit}
         action={action}
       />
-      <div className={styles["menu-container"]}>
-        <span className={styles["menu-header"]}>menu</span>
+      <div className={styles.menuContainer}>
+        <span className={styles.menuHeader}>menu</span>
         <Link href={"/questions"}>
           <div
             className={
               itemSelected == "questions"
-                ? styles["item-selected-container"]
-                : styles["questions-container"]
+                ? styles.itemSelectedContainer
+                : styles.questionsContainer
             }
             onMouseEnter={() => setHoveredItem("questions")}
             onMouseLeave={() => setHoveredItem("")}
           >
-            <div className={styles["questions-icon-wrapper"]}>
+            <div className={styles.questionsIconWrapper}>
               <Image
                 src={
                   itemSelected == "questions" || hoveredItem == "questions"
@@ -57,8 +57,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <span
               className={
                 itemSelected == "questions"
-                  ? styles["item-selected-text"]
-                  : styles["questions"]
+                  ? styles.itemSelectedText
+                  : styles.questions
               }
             >
               Questions
@@ -69,13 +69,13 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div
             className={
               itemSelected == "tags"
-                ? styles["item-selected-container"]
-                : styles["tags-container"]
+                ? styles.itemSelectedContainer
+                : styles.tagsContainer
             }
             onMouseEnter={() => setHoveredItem("tags")}
             onMouseLeave={() => setHoveredItem("")}
           >
-            <div className={styles["tags-icon-wrapper"]}>
+            <div className={styles.tagsIconWrapper}>
               <Image
                 src={
                   itemSelected == "tags" || hoveredItem == "tags"
@@ -90,9 +90,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             </div>
             <span
               className={
-                itemSelected == "tags"
-                  ? styles["item-selected-text"]
-                  : styles["tags"]
+                itemSelected == "tags" ? styles.itemSelectedText : styles.tags
               }
             >
               Tags

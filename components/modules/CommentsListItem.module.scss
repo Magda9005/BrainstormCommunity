@@ -14,7 +14,7 @@
   }
 }
 
-.comment-content {
+.commentContent {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 10px;
@@ -28,7 +28,7 @@
   }
 }
 
-.votes-and-replies-container {
+.votesAndRepliesContainer {
   display: flex;
   justify-content: space-between;
   height: 23px;
@@ -36,14 +36,14 @@
   border-top: 1px solid $grey;
 }
 
-.votes-container {
+.votesContainer {
   display: flex;
   flex-direction: row;
   width: 100px;
 }
 
-.thumbup-icon-wrapper,
-.thumbdown-icon-wrapper {
+.thumbupIconWrapper,
+.thumbdownIconWrapper {
   width: 14px;
   height: 14px;
   margin-right: 2px;

@@ -1,7 +1,7 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.sidebar-container {
+.sidebarContainer {
   width: 30%;
   background: #ffffff;
 
@@ -10,7 +10,7 @@
   }
 }
 
-.search-wrapper {
+.searchWrapper {
   width: 100%;
   background: #ffffff;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.menu-container {
+.menuContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -28,7 +28,7 @@
   margin-top: 100px;
 }
 
-.menu-header {
+.menuHeader {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
@@ -45,14 +45,14 @@
   }
 }
 
-.questions-icon-wrapper,
-.tags-icon-wrapper {
+.questionsIconWrapper,
+.tagsIconWrapper {
   width: 18px;
   height: 18px;
 }
 
-.questions-container,
-.tags-container {
+.questionsContainer,
+.tagsContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,9 +75,9 @@
   margin-left: 3px;
 }
 
-.item-selected-container,
-.questions-container:hover,
-.tags-container:hover {
+.itemSelectedContainer,
+.questionsContainer:hover,
+.tagsContainer:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -94,7 +94,7 @@
   }
 }
 
-.item-selected-text {
+.itemSelectedText {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 13px;

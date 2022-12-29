@@ -9,9 +9,7 @@ interface AvatarProps {
 export const Avatar: React.FC<AvatarProps> = ({ avatarUrl, openQuestion }) => (
   <div
     className={
-      openQuestion
-        ? styles["avatar-wrapper-open-question"]
-        : styles["avatar-wrapper"]
+      openQuestion ? styles.avatarWrapperOpenQuestion : styles.avatarWrapper
     }
   >
     <Image

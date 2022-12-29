@@ -16,7 +16,7 @@ const Search: React.FC<SearchProps> = ({
 }) => (
   <form role="form" action={action} method="GET" onSubmit={onSubmit}>
     <input
-      className={styles["search-input"]}
+      className={styles.searchInput}
       type="text"
       value={value}
       onChange={onChange}

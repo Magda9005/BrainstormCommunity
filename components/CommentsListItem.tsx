@@ -42,11 +42,11 @@ export const CommentListItem: React.FC<CommentListItemProps> = ({
   return (
     <div className={styles.container}>
       <Header avatarUrl={avatarUrl} authorName={authorName} date={date} />
-      <p className={styles["comment-content"]}>{commentContent}</p>
-      <div className={styles["votes-and-replies-container"]}>
-        <div className={styles["votes-container"]}>
+      <p className={styles.commentContent}>{commentContent}</p>
+      <div className={styles.votesAndRepliesContainer}>
+        <div className={styles.votesContainer}>
           <div
-            className={styles["thumbup-icon-wrapper"]}
+            className={styles.thumbupIconWrapper}
             onClick={() => {
               if (!commentAlreadyVotedByUser() && !isLiked && isUnliked) {
                 setLikesCount((likesCount) => likesCount + 1);
@@ -80,7 +80,7 @@ export const CommentListItem: React.FC<CommentListItemProps> = ({
           </div>
           <span className={styles.upvotes}>{likesCount}</span>
           <div
-            className={styles["thumbdown-icon-wrapper"]}
+            className={styles.thumbdownIconWrapper}
             onClick={() => {
               if (isLiked && !checkIfAlreadyUnliked() && !isUnliked) {
                 setIsLiked(false);

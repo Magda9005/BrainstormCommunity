@@ -32,9 +32,9 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
   handleIncreaseViews,
   userLoggedIn,
 }) => (
-  <div className={styles["container"]}>
-    <div className={styles["header"]}>
-      <div className={styles["avatar-wrapper"]}>
+  <div className={styles.container}>
+    <div className={styles.header}>
+      <div className={styles.avatarWrapper}>
         <Image
           src={imageUrl}
           alt="Author's photo/avatar"
@@ -42,15 +42,15 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
           objectFit="cover"
         />
       </div>
-      <div className={styles["nickname-and-time-container"]}>
-        <span className={styles["nickname"]}>@{nickname}</span>
-        <span className={styles["date"]}>{date}</span>
+      <div className={styles.nicknameAndTimeContainer}>
+        <span className={styles.nickname}>@{nickname}</span>
+        <span className={styles.date}>{date}</span>
       </div>
       {userLoggedIn && (
         <>
           <Link href={`/questions/${postId}`}>
             <div
-              className={styles["dots-vertical-wrapper"]}
+              className={styles.dotsVerticalWrapper}
               onClick={handleIncreaseViews}
             >
               <Image
@@ -65,19 +65,19 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
         </>
       )}
     </div>
-    <div className={styles["title-and-text-container"]}>
-      <h2 className={styles["title"]}>{title}</h2>
-      <p className={styles["text-teaser"]}>{text}</p>
+    <div className={styles.titleAndTextContainer}>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.textTeaser}>{text}</p>
     </div>
-    <div className={styles["submenu"]}>
-      <div className={styles["tags-container"]}>
+    <div className={styles.submenu}>
+      <div className={styles.tagsContainer}>
         {tags.map((tag) => (
           <TagLabel tagName={tag} />
         ))}
       </div>
-      <div className={styles["activities-container"]}>
-        <div className={styles["views-container"]}>
-          <div className={styles["views-icon-wrapper"]}>
+      <div className={styles.activitiesContainer}>
+        <div className={styles.viewsContainer}>
+          <div className={styles.viewsIconWrapper}>
             <Image
               src="/eye.svg"
               alt="Eye icon"
@@ -86,10 +86,10 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
               height="15"
             />
           </div>
-          <span className={styles["views-number"]}> {viewsAmount}</span>
+          <span className={styles.viewsNumber}> {viewsAmount}</span>
         </div>
-        <div className={styles["comments-container"]}>
-          <div className={styles["comment-icon-wrapper"]}>
+        <div className={styles.commentsContainer}>
+          <div className={styles.commentIconWrapper}>
             <Image
               src="/comment-icon.svg"
               alt="Comment icon"
@@ -98,10 +98,10 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
               height="15"
             />
           </div>
-          <span className={styles["comments-number"]}> {commentsAmount}</span>
+          <span className={styles.commentsNumber}> {commentsAmount}</span>
         </div>
-        <div className={styles["upvotes-container"]}>
-          <div className={styles["upvotes-icon-wrapper"]}>
+        <div className={styles.upvotesContainer}>
+          <div className={styles.upvotesIconWrapper}>
             <Image
               src="/upvotes-icon.svg"
               alt="Upvotes icon"
@@ -110,7 +110,7 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
               height="15"
             />
           </div>
-          <span className={styles["upvotes-number"]}>{upvotesAmount}</span>
+          <span className={styles.upvotesNumber}>{upvotesAmount}</span>
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ const Questions: NextPage<QuestionsProps> = ({ posts, users }) => {
         userLoggedIn={status === "authenticated"}
         onClick={() => signOut()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           itemSelected={"questions"}
           value={searchedWord}
@@ -44,7 +44,7 @@ const Questions: NextPage<QuestionsProps> = ({ posts, users }) => {
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["questions-container"]}>
+        <div className={styles.questionsContainer}>
           {posts.map((post) => (
             <QuestionListItem
               key={post.id}

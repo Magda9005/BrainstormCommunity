@@ -18,12 +18,12 @@ const RightPanel: React.FC<RightPanelProps> = ({
   author,
   posts,
 }) => (
-  <div className={styles["right-panel-container"]}>
+  <div className={styles.rightPanelContainer}>
     {questionsList && (
       <>
-        <div className={styles["must-read-container"]}>
-          <div className={styles["title-wrapper"]}>
-            <div className={styles["icon-wrapper"]}>
+        <div className={styles.mustReadContainer}>
+          <div className={styles.titleWrapper}>
+            <div className={styles.iconWrapper}>
               <Image
                 src="/star.svg"
                 alt="Star icon"
@@ -32,13 +32,13 @@ const RightPanel: React.FC<RightPanelProps> = ({
                 height="18"
               />
             </div>
-            <span className={styles["must-read-title"]}>Must-read posts </span>
+            <span className={styles.mustReadTitle}>Must-read posts </span>
           </div>
-          <div className={styles["links-container"]}>
+          <div className={styles.linksContainer}>
             <Link href={"/rules"}>
-              <div className={styles["link-wrapper"]}>
+              <div className={styles.linkWrapper}>
                 <div className={styles.hash}>•</div>{" "}
-                <a className={styles["link"]}>
+                <a className={styles.link}>
                   {" "}
                   Please read rules before you start working on a platform
                 </a>
@@ -46,9 +46,9 @@ const RightPanel: React.FC<RightPanelProps> = ({
             </Link>
             <Link href={"/vision"}>
               <a role="link">
-                <div className={styles["link-wrapper"]}>
+                <div className={styles.linkWrapper}>
                   <div className={styles.hash}> •</div>
-                  <a className={styles["link"]}>
+                  <a className={styles.link}>
                     {" "}
                     Vision & strategy of BrainstormCommunity
                   </a>
@@ -57,9 +57,9 @@ const RightPanel: React.FC<RightPanelProps> = ({
             </Link>
           </div>
         </div>
-        <div className={styles["featured-links-container"]}>
-          <div className={styles["title-wrapper"]}>
-            <div className={styles["icon-wrapper"]}>
+        <div className={styles.featuredLinksContainer}>
+          <div className={styles.titleWrapper}>
+            <div className={styles.iconWrapper}>
               <Image
                 src="/featured-links-icon.svg"
                 alt="Icon"
@@ -68,15 +68,12 @@ const RightPanel: React.FC<RightPanelProps> = ({
                 height="18"
               />
             </div>
-            <span className={styles["featured-links-title"]}>
-              Featured Links{" "}
-            </span>
+            <span className={styles.featuredLinksTitle}>Featured Links</span>
           </div>
-          <div className={styles["links-container"]}>
-            <div className={styles["link-wrapper"]}>
-              <div className={styles.hash}>•</div>{" "}
-              <a className={styles["link"]}>
-                {" "}
+          <div className={styles.linksContainer}>
+            <div className={styles.linkWrapper}>
+              <div className={styles.hash}>•</div>
+              <a className={styles.link}>
                 BrainstormCommunity source-code on GitHub
               </a>
             </div>
@@ -88,9 +85,9 @@ const RightPanel: React.FC<RightPanelProps> = ({
     {openQuestion && (
       <>
         <Avatar openQuestion={true} avatarUrl={avatarUrl} />
-        <div className={styles["author"]}>@{author}</div>
-        <div className={styles["posts-quantity-container"]}>
-          <div className={styles["sparkles-icon-wrapper"]}>
+        <div className={styles.author}>@{author}</div>
+        <div className={styles.postsQuantityContainer}>
+          <div className={styles.sparklesIconWrapper}>
             <Image
               src="/sparkles.svg"
               alt="Sparkles"
@@ -99,10 +96,10 @@ const RightPanel: React.FC<RightPanelProps> = ({
               height="24"
             />
           </div>
-          <span className={styles["posts-amount"]}>{posts}</span>
+          <span className={styles.postsAmount}>{posts}</span>
         </div>
         <Link href={`https://github.com/${author}`}>
-          <div className={styles["github-icon-wrapper"]}>
+          <div className={styles.githubIconWrapper}>
             <Image
               src="/github-icon.svg"
               alt="Github icon"

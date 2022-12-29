@@ -14,11 +14,11 @@ export const Header: React.FC<HeaderProps> = ({
   date,
   openQuestion,
 }) => (
-  <div className={styles["header"]}>
+  <div className={styles.header}>
     <Avatar avatarUrl={avatarUrl} openQuestion={openQuestion} />
-    <div className={styles["nickname-and-time-container"]}>
-      <span className={styles["nickname"]}>@{authorName}</span>
-      <span className={styles["date"]}>{date}</span>
+    <div className={styles.nicknameAndTimeContainer}>
+      <span className={styles.nickname}>@{authorName}</span>
+      <span className={styles.date}>{date}</span>
     </div>
   </div>
 );

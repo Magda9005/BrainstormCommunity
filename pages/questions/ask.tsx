@@ -40,36 +40,36 @@ const AskQuestion: NextPage<AskQuestionProps> = ({ author }) => {
         userLoggedIn={status === "authenticated"}
         onClick={status === "authenticated" ? () => signOut() : null}
       />
-      <div className={styles["container"]}>
+      <div className={styles.container}>
         <Sidebar
           value={searchedWord}
           onChange={(e) => setSearchedWord(e.target.value)}
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["main-layout"]}>
-          <div className={styles["ask-question-container"]}>
+        <div className={styles.mainLayout}>
+          <div className={styles.askQuestionContainer}>
             <MultipleSelectPlaceholder handleChange={handleChange} tag={tag} />
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle((e.target as HTMLInputElement).value)}
               placeholder="Type catching attention title"
-              className={styles["title"]}
+              className={styles.title}
             />
             <textarea
               value={content}
               onChange={(e) => setContent(e.target.value)}
               placeholder="Type your question"
-              className={styles["question"]}
+              className={styles.question}
             />
-            <div className={styles["publish-button-container"]}>
+            <div className={styles.publishButtonContainer}>
               <Link href={"/questions"}>
                 <button
-                  className={styles["publish-button"]}
+                  className={styles.publishButton}
                   onClick={() => addPostToDb(title, content, author, tag)}
                 >
-                  <div className={styles["send-icon-wrapper"]}>
+                  <div className={styles.sendIconWrapper}>
                     <Image
                       src="/send-icon.svg"
                       alt="BrainstormCommunity-logo"
@@ -78,7 +78,7 @@ const AskQuestion: NextPage<AskQuestionProps> = ({ author }) => {
                       height="10.83"
                     />
                   </div>
-                  <span className="publish"> Publish</span>
+                  <span className={styles.publish}> Publish</span>
                 </button>
               </Link>
             </div>

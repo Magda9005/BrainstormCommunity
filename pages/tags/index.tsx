@@ -17,7 +17,7 @@ const TagsPage: NextPage = () => {
         userLoggedIn={status === "authenticated"}
         onClick={() => signOut()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           itemSelected={"tags"}
           value={searchedWord}
@@ -27,13 +27,13 @@ const TagsPage: NextPage = () => {
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["container"]}>
-          <div className={styles["tags-container"]}>
+        <div className={styles.container}>
+          <div className={styles.tagsContainer}>
             {tags.map((tag) => (
               <Link href={`/tags/${tag}`}>
                 <div key={tag} className={styles.tag}>
                   {" "}
-                  <span className={styles["tag-name"]}> {tag} </span>{" "}
+                  <span className={styles.tagName}> {tag} </span>{" "}
                 </div>
               </Link>
             ))}

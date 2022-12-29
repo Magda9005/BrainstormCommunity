@@ -6,7 +6,7 @@
   flex-direction: rows;
 }
 
-.main-layout {
+.mainLayout {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,11 +22,11 @@
   }
 }
 
-.select-container {
+.selectContainer {
   width: 100%;
 }
 
-.ask-question-container {
+.askQuestionContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -92,7 +92,7 @@
   color: $dark-grey;
 }
 
-.publish-button-container {
+.publishButtonContainer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -104,7 +104,7 @@
   }
 }
 
-.publish-button {
+.publishButton {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -125,7 +125,7 @@
   cursor: pointer;
 }
 
-.send-icon-wrapper {
+.sendIconWrapper {
   width: 10.83px;
   height: 10.83px;
 }

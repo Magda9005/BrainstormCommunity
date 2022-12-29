@@ -42,7 +42,7 @@ const PostsWithSearchedPhrase: React.FC<PostsWithSearchedPhraseProps> = ({
         userLoggedIn={status === "authenticated"}
         onClick={status === "authenticated" ? () => signOut() : () => signIn()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           itemSelected={"questions"}
           value={searchedWord}
@@ -50,7 +50,7 @@ const PostsWithSearchedPhrase: React.FC<PostsWithSearchedPhraseProps> = ({
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["questions-container"]}>
+        <div className={styles.questionsContainer}>
           {postsWithSearchedPhrase.length > 0 &&
             postsWithSearchedPhrase.map((post) => (
               <QuestionListItem
@@ -70,12 +70,10 @@ const PostsWithSearchedPhrase: React.FC<PostsWithSearchedPhraseProps> = ({
               />
             ))}
           {postsWithSearchedPhrase.length < 1 && (
-            <div className={styles["question-not-found-container"]}>
-              <p className={styles["question-not-found-text"]}>
+            <div className={styles.questionNotFoundContainer}>
+              <p className={styles.questionNotFoundText}>
                 Sorry, couldn't find question containing
-                <span className={styles["searched-phrase"]}>
-                  {searchedPhrase}{" "}
-                </span>
+                <span className={styles.searchedPhrase}>{searchedPhrase}</span>
                 .<br />
                 Please try with different phrase.
               </p>

@@ -22,18 +22,18 @@ const OpenQuestion: React.FC<OpenQuestionProps> = ({
   tags,
   onClick,
 }) => (
-  <div className={styles["question-container"]}>
+  <div className={styles.questionContainer}>
     <Header avatarUrl={avatar} authorName={authorName} date={date} />
-    <h2 className={styles["title"]}>{title}</h2>
-    <p className={styles["text"]}>{text}</p>
-    <div className={styles["submenu"]}>
-      <div className={styles["tags-container"]}>
+    <h2 className={styles.title}>{title}</h2>
+    <p className={styles.text}>{text}</p>
+    <div className={styles.submenu}>
+      <div className={styles.tagsContainer}>
         {tags.map((tag) => (
           <TagLabel tagName={tag} />
         ))}
       </div>
-      <button className={styles["vote-button"]} onClick={onClick}>
-        <div className={styles["arrow-icon-wrapper"]}>
+      <button className={styles.voteButton} onClick={onClick}>
+        <div className={styles.arrowIconWrapper}>
           <Image
             src={"/arrow-up.svg"}
             alt="Arrow-up-icon"
@@ -42,7 +42,7 @@ const OpenQuestion: React.FC<OpenQuestionProps> = ({
             height="13"
           />
         </div>{" "}
-        <span className={styles["vote"]}>Vote</span>{" "}
+        <span className={styles.vote}>Vote</span>{" "}
       </button>
     </div>
   </div>

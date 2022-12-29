@@ -13,25 +13,25 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
   if (userLoggedIn && userLoggedIn !== null) {
     button = (
       <Link href={"/"}>
-        <button className={styles["logout"]} onClick={onClick}>
-          <span className={styles["logout-text"]}>Logout</span>
+        <button className={styles.logout} onClick={onClick}>
+          <span className={styles.logoutText}>Logout</span>
         </button>
       </Link>
     );
   } else if (!userLoggedIn && userLoggedIn !== null) {
     button = (
       <Link href={"/signin"}>
-        <a role="link" className={styles["login"]}>
-          <span className={styles["login-text"]}>Login</span>
+        <a role="link" className={styles.login}>
+          <span className={styles.loginText}>Login</span>
         </a>
       </Link>
     );
   }
 
   return (
-    <div className={styles["navbar"]}>
-      <div className={styles["name-and-logo-container"]}>
-        <div className={styles["logo-wrapper"]}>
+    <div className={styles.navbar}>
+      <div className={styles.nameAndLogoContainer}>
+        <div className={styles.logoWrapper}>
           <Image
             src="/logo.svg"
             alt="BrainstormCommunity-logo"
@@ -42,16 +42,16 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
           />
         </div>
         <div>
-          <span className={styles["website-name"]}>BrainStorm</span>
-          <span className={styles["website-name"]}>Community</span>
+          <span className={styles.websiteName}>BrainStorm</span>
+          <span className={styles.websiteName}>Community</span>
         </div>
       </div>
       {button}
       {userLoggedIn && (
         <>
           <Link href={"/questions/ask"}>
-            <a role="link" className={styles["ask-question"]}>
-              <div className={styles["ask-question-icon-wrapper"]}>
+            <a role="link" className={styles.askQuestion}>
+              <div className={styles.askQuestionIconWrapper}>
                 <Image
                   src="/ask-question-icon.svg"
                   alt="Cross in the circle"
@@ -60,9 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
                   height="13"
                 />
               </div>
-              <span className={styles["ask-question-text"]}>
-                Ask a question
-              </span>
+              <span className={styles.askQuestionText}>Ask a question</span>
             </a>
           </Link>
         </>

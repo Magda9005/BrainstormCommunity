@@ -12,15 +12,15 @@ const SuggestionForm: React.FC<SuggestionFormProps> = ({
   commentContent,
   onChange,
 }) => (
-  <div className={styles["container"]}>
+  <div className={styles.container}>
     <textarea
-      className={styles["suggestion-textfield"]}
+      className={styles.suggestionTextfield}
       value={commentContent}
       onChange={(e) => onChange(e.target.value)}
       placeholder="Type here your wise suggestion"
     />
-    <button className={styles["suggest-button"]} onClick={onClick}>
-      <div className={styles["suggest-icon-wrapper"]}>
+    <button className={styles.suggestButton} onClick={onClick}>
+      <div className={styles.suggestIconWrapper}>
         <Image
           src={"/suggest.svg"}
           alt="Arrow-up-icon"
@@ -29,7 +29,7 @@ const SuggestionForm: React.FC<SuggestionFormProps> = ({
           height="13"
         />
       </div>
-      <span className={styles["suggest"]}>Suggest</span>
+      <span className={styles.suggest}>Suggest</span>
     </button>
   </div>
 );

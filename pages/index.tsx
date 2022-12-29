@@ -14,30 +14,26 @@ const Home: NextPage = () => {
         <title>BrainstormCommunity</title>
       </Head>
       <Navbar userLoggedIn={null} />
-      <div className={styles["home-page-container"]}>
-        <div className={styles["login-container"]}>
-          <h1 className={styles["header"]}>Welcome to BrainStormCommunity !</h1>
-          <p className={styles["welcome-text"]}>
+      <div className={styles.homePageContainer}>
+        <div className={styles.loginContainer}>
+          <h1 className={styles.header}>Welcome to BrainStormCommunity !</h1>
+          <p className={styles.welcomeText}>
             A thousands of questions are waiting for your wise suggestions !
             Join the most helpful community and get all features and priviliges.
           </p>
           {session ? (
-            <button
-              className={styles["login-button"]}
-              onClick={() => signOut()}
-            >
-              {" "}
-              Logout{" "}
+            <button className={styles.loginButton} onClick={() => signOut()}>
+              Logout
             </button>
           ) : (
             <Link href={"/signin"}>
-              <a role="link" className={styles["login-button"]}>
+              <a role="link" className={styles.loginButton}>
                 Login
               </a>
             </Link>
           )}
         </div>
-        <div className={styles["image-wrapper"]}></div>
+        <div className={styles.imageWrapper}></div>
       </div>
     </>
   );

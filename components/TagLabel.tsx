@@ -5,8 +5,8 @@ interface TagLabelProps {
 }
 
 const TagLabel: React.FC<TagLabelProps> = ({ tagName }) => (
-  <div className={styles["tag-wrapper"]}>
-    <span className={styles["tag-name"]}>{tagName}</span>
+  <div className={styles.tagWrapper}>
+    <span className={styles.tagName}>{tagName}</span>
   </div>
 );
 

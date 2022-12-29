@@ -1,7 +1,7 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.right-panel-container {
+.rightPanelContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,8 @@
   }
 }
 
-.must-read-container,
-.featured-links-container {
+.mustReadContainer,
+.featuredLinksContainer {
   width: 200px;
   gap: 10px;
   margin-top: 15px;
@@ -34,11 +34,11 @@
   }
 }
 
-.featured-links-container {
+.featuredLinksContainer {
   margin-top: 30px;
 }
 
-.title-wrapper {
+.titleWrapper {
   display: flex;
   flex-direction: row;
   width: 230px;
@@ -46,14 +46,14 @@
   border-bottom: 1px solid $grey;
 }
 
-.icon-wrapper {
+.iconWrapper {
   width: 18px;
   height: 18px;
   margin-right: 5px;
 }
 
-.must-read-title,
-.featured-links-title {
+.mustReadTitle,
+.featuredLinksTitle {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 13px;
@@ -62,7 +62,7 @@
   color: #000000;
 }
 
-.links-container {
+.linksContainer {
   display: flex;
   flex-direction: column;
 }
@@ -89,7 +89,7 @@
   margin: 3px;
 }
 
-.link-wrapper {
+.linkWrapper {
   display: flex;
   flex-direction: row;
 }
@@ -117,7 +117,7 @@
   }
 }
 
-.posts-quantity-container {
+.postsQuantityContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -127,7 +127,7 @@
   border-bottom: 1px solid $grey;
 }
 
-.sparkles-icon-wrapper {
+.sparklesIconWrapper {
   width: 14px;
   height: 14px;
   @include md {
@@ -136,7 +136,7 @@
   }
 }
 
-.posts-amount {
+.postsAmount {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
@@ -149,7 +149,7 @@
   }
 }
 
-.github-icon-wrapper {
+.githubIconWrapper {
   width: 18px;
   height: 18px;
   margin-top: 15px;

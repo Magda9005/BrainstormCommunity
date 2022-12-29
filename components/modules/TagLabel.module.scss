@@ -1,7 +1,7 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.tag-wrapper {
+.tagWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
   }
 }
 
-.tag-name {
+.tagName {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 8px;

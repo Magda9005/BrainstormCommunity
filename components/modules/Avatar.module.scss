@@ -1,11 +1,15 @@
 @import "../../styles/breakpoints";
 
-.avatar-wrapper {
+.wrapper {
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.avatarWrapper {
+  @extend .wrapper;
 
   @include md {
     width: 40px;
@@ -13,13 +17,8 @@
   }
 }
 
-.avatar-wrapper-open-question {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-
+.avatarWrapperOpenQuestion {
+  @extend .wrapper;
   @include md {
     width: 150px;
     height: 150px;

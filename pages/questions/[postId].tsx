@@ -103,7 +103,7 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
         userLoggedIn={status === "authenticated"}
         onClick={() => signOut()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           value={searchedWord}
           onChange={(e) =>
@@ -112,7 +112,7 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["question-and-comments-container"]}>
+        <div className={styles.questionAndCommentsContainer}>
           <OpenQuestion
             avatar={authorAvatar}
             authorName={authorName}
@@ -124,7 +124,7 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
               handleSubmitVote(post.id, session?.user.email, upvotes)
             }
           />
-          <span className={styles["suggestions"]}>Suggestions</span>
+          <span className={styles.suggestions}>Suggestions</span>
           <SuggestionForm
             commentContent={commentContent}
             onChange={handleOnChange}

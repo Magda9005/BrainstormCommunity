@@ -1,7 +1,7 @@
 @import "../../styles/breakpoints";
 @import "../../styles/colors";
 
-.sidebar-and-main-layout-container {
+.sidebarAndMainLayoutContainer {
   display: flex;
   flex-direction: rows;
   min-height: 100vh;
@@ -20,7 +20,7 @@
   }
 }
 
-.text-container {
+.textContainer {
   width: 90%;
   margin-bottom: 5px;
   margin: 15px;
@@ -34,7 +34,7 @@
   }
 }
 
-.rules-header {
+.rulesHeader {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 700;
@@ -54,7 +54,7 @@
   }
 }
 
-.rules-text {
+.rulesText {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 12px;

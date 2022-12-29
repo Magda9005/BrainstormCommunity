@@ -15,7 +15,7 @@ const RulesPage: NextPage = () => {
         userLoggedIn={status === "authenticated"}
         onClick={() => signOut()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           value={searchedWord}
           onChange={(e) =>
@@ -24,23 +24,23 @@ const RulesPage: NextPage = () => {
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["text-container"]}>
-          <h1 className={styles["rules-header"]}> Rules & tips</h1>
-          <p className={styles["rules-text"]}>
+        <div className={styles.textContainer}>
+          <h1 className={styles.rulesHeader}> Rules & tips</h1>
+          <p className={styles.rulesText}>
             • Before you ask your question, use search bar to verify if the
             similar question hasn't been asked.
           </p>
-          <p className={styles["rules-text"]}>
+          <p className={styles.rulesText}>
             • Write a concise title that summarizes the specific problem.
           </p>
-          <p className={styles["rules-text"]}>
+          <p className={styles.rulesText}>
             • Before you post any code, introduce your problem.
           </p>
-          <p className={styles["rules-text"]}>
+          <p className={styles.rulesText}>
             • Respect other community members, remember-it is forbidden to use
             profanity and offensive language.
           </p>
-          <p className={styles["rules-text"]}>
+          <p className={styles.rulesText}>
             • Don't hesitate to answer the questions and share your ideas!
           </p>
         </div>

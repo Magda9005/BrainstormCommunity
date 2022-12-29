@@ -43,7 +43,7 @@ const PostsSelectedByTagName: NextPage<PostsSelectedByTagNameProps> = ({
         userLoggedIn={status === "authenticated"}
         onClick={() => signOut()}
       />
-      <div className={styles["sidebar-and-main-layout-container"]}>
+      <div className={styles.sidebarAndMainLayoutContainer}>
         <Sidebar
           itemSelected={"tags"}
           value={searchedWord}
@@ -53,8 +53,8 @@ const PostsSelectedByTagName: NextPage<PostsSelectedByTagNameProps> = ({
           action={`/questions/search/${route}`}
           onSubmit={() => setRoute(searchedWord.toLowerCase().trim())}
         />
-        <div className={styles["questions-container"]}>
-          <h2 className={styles["tag-name"]}>{tagName}</h2>
+        <div className={styles.questionsContainer}>
+          <h2 className={styles.tagName}>{tagName}</h2>
           {postsIdsByTag !== null &&
             allPosts.map((post) => {
               for (let postId of postsIdsByTag) {

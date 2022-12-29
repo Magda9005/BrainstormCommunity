@@ -10,7 +10,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.name-and-logo-container {
+.nameAndLogoContainer {
   position: absolute;
   display: flex;
   align-items: center;
@@ -24,21 +24,21 @@
   }
 }
 
-.logo-wrapper {
+.logoWrapper {
   width: 25px;
   height: 30px;
 }
 
-.website-name {
+.websiteName {
   font-family: "Roboto";
 }
 
-.website-name:first-of-type {
+.websiteName:first-of-type {
   font-weight: 400;
   margin-left: 3px;
 }
 
-.website-name:last-of-type {
+.websiteName:last-of-type {
   font-weight: 900;
 }
 
@@ -63,8 +63,8 @@
   }
 }
 
-.logout-text,
-.login-text {
+.logoutText,
+.loginText {
   font-family: "Roboto";
   font-weight: 900;
   font-size: 9px;
@@ -78,7 +78,7 @@
   }
 }
 
-.ask-question {
+.askQuestion {
   position: absolute;
   top: 27px;
   right: 72px;
@@ -101,7 +101,7 @@
   }
 }
 
-.ask-question-icon-wrapper {
+.askQuestionIconWrapper {
   width: 10px;
   height: 10px;
 
@@ -111,7 +111,7 @@
   }
 }
 
-.ask-question-text {
+.askQuestionText {
   font-family: "Roboto";
   font-weight: 900;
   font-size: 9px;
