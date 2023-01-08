@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BrainstormCommunity - clone of Stack Overflow
 
-## Getting Started
+Fullstack project in Typescript, React and Next.js, using Node.js, PostgreSQL and Prisma.
 
-First, run the development server:
+## Features of the project:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- authentication using GitHub provider
+- possibility to add posts (choosing the tags), comments, likes, unlikes and votes
+- displaying number of views, comments and votes for each post
+- displaying likes and unlikes for each comment
+- informations about user: displaying the user's avatar, nickname, number of posts published and possibility to access the user's github profile
+- searching for the posts containing the given key word
+- clicking on the tag enables to display all posts containing the given tag
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211198066-01e6bfa7-5f85-487f-ab74-dc9025d21da9.png">
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/92581964/211198142-e88b71a7-e652-4846-8d9f-4c4d17fd8282.png">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211197541-3846f101-3094-4065-af0a-45eece1fb079.png">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211197716-c71ba790-fcc5-4716-9df7-cb04c9b1271e.png">
 
-## Learn More
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211197943-72737fe4-d707-4e5b-b08a-130c71e10282.png">
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211198673-821f3c1b-2efd-468f-beb4-bd80f2e4e335.png">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211198833-814cb1ed-d7e3-4b67-b6a1-9211d641815e.png">
 
-## Deploy on Vercel
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/92581964/211198963-c29354c3-5bfd-4861-a439-4b60458e20c5.png">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to setup the project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Install all dependencies: `yarn install`
+2. Generate Prisma Client: `yarn run postinstall`
+3. Start the development server: `yarn run dev`
