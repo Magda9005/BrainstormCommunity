@@ -51,7 +51,7 @@ const Questions: NextPage<QuestionsProps> = ({ posts, users }) => {
               nickname={getAuthorName(post.id, users)}
               date={post.createdAt}
               title={post.title}
-              text={getTeaserText(post.content, windowSize)}
+              text={post.content}
               imageUrl={getAuthorAvatar(post.id, users)}
               tags={getTags(post.tags)}
               viewsAmount={post.viewCount}

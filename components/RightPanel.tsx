@@ -73,7 +73,7 @@ const RightPanel: React.FC<RightPanelProps> = ({
           <div className={styles.linksContainer}>
             <div className={styles.linkWrapper}>
               <div className={styles.hash}>•</div>
-              <a className={styles.link}>
+              <a className={styles.link} href={'https://github.com/Magda9005/BrainstormCommunity'}>
                 BrainstormCommunity source-code on GitHub
               </a>
             </div>

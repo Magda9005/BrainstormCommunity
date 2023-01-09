@@ -21,6 +21,7 @@ import {
   checkIfAlreadyUnliked,
   removeThumbUp,
   removeThumbDown,
+  postAlreadyUpvotedByUser
 } from "../../helperFunctions";
 import SuggestionForm from "../../components/SuggestionForm";
 import CommentListItem from "../../components/CommentsListItem";
@@ -65,9 +66,10 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
   const [searchedWord, setSearchedWord] = useState("");
   const [postComments, setPostComments] = useState(comments);
   const router = useRouter();
+  const [voted,setVoted]=useState(postAlreadyUpvotedByUser(upvotes,userEmail))
 
   const refresh = () => {
-    return router.replace(router.asPath);
+    return router.replace(router.asPath,undefined,{scroll:false});
   };
 
   const handleOnChange = (value) => {
@@ -120,8 +122,12 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
             title={post.title}
             text={post.content}
             tags={getTags(post.tags)}
-            onClick={() =>
+            voted={voted}
+            onClick={() =>{
               handleSubmitVote(post.id, session?.user.email, upvotes)
+              setVoted(true)
+            }
+              
             }
           />
           <span className={styles.suggestions}>Suggestions</span>
@@ -129,7 +135,6 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
             commentContent={commentContent}
             onChange={handleOnChange}
             onClick={() => {
-              //1. setting UI optimistically:
               setPostComments([
                 ...postComments,
                 {
@@ -139,13 +144,13 @@ const OpenQuestionPage: NextPage<OpenQuestionPageProps> = ({
                   authorImage: commentsAuthorAvatar,
                 },
               ]);
-              //2.execute function handleAddCommentToDb
               handleAddCommentToDb(
                 post.id,
                 commentsAuthor,
                 commentContent,
                 commentsAuthorAvatar
               );
+              setCommentContent("")
             }}
           />
 
@@ -258,3 +263,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   };
 };
+

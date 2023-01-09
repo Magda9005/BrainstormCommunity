@@ -30,6 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
 
   return (
     <div className={styles.navbar}>
+            <Link href={'/questions'}>
       <div className={styles.nameAndLogoContainer}>
         <div className={styles.logoWrapper}>
           <Image
@@ -46,6 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
           <span className={styles.websiteName}>Community</span>
         </div>
       </div>
+      </Link>
       {button}
       {userLoggedIn && (
         <>
@@ -69,3 +71,4 @@ const Navbar: React.FC<NavbarProps> = ({ onClick, userLoggedIn }) => {
   );
 };
 export default Navbar;
+

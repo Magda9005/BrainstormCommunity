@@ -21,6 +21,7 @@ const OpenQuestion: React.FC<OpenQuestionProps> = ({
   text,
   tags,
   onClick,
+  voted
 }) => (
   <div className={styles.questionContainer}>
     <Header avatarUrl={avatar} authorName={authorName} date={date} />
@@ -32,7 +33,8 @@ const OpenQuestion: React.FC<OpenQuestionProps> = ({
           <TagLabel tagName={tag} />
         ))}
       </div>
-      <button className={styles.voteButton} onClick={onClick}>
+      {voted?<button className={styles.votedButton} onClick={onClick}><span className={styles.voted}>Voted</span>
+</button> : <button className={styles.voteButton} onClick={onClick}>
         <div className={styles.arrowIconWrapper}>
           <Image
             src={"/arrow-up.svg"}
@@ -42,8 +44,8 @@ const OpenQuestion: React.FC<OpenQuestionProps> = ({
             height="13"
           />
         </div>{" "}
-        <span className={styles.vote}>Vote</span>{" "}
-      </button>
+        <span className={styles.vote}>Vote</span>
+      </button>}
     </div>
   </div>
 );

@@ -67,7 +67,7 @@ const QuestionListItem: React.FC<QuestionListItemProps> = ({
     </div>
     <div className={styles.titleAndTextContainer}>
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.textTeaser}>{text}</p>
+      <span className={styles.textTeaser}>{text}</span>
     </div>
     <div className={styles.submenu}>
       <div className={styles.tagsContainer}>

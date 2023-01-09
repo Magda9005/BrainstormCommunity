@@ -3,7 +3,6 @@
 
 .sidebarAndMainLayoutContainer {
   display: flex;
-  flex-direction: rows;
   min-height: 100vh;
   background-color: $background-color;
 }
@@ -12,12 +11,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 60%;
   background-color: $background-color;
-
-  @include lg {
-    width: 80%;
-  }
+  
 }
 
 .questionNotFoundContainer {

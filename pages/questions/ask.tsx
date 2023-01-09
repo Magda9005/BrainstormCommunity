@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { getSession } from "next-auth/react";
-import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
 import styles from "../../components/modules/AskQuestionPage.module.scss";
@@ -11,6 +10,8 @@ import { NextPage } from "next";
 import { User } from "../../interfaces";
 import { addPostToDb } from "../../helperFunctions";
 import { GetServerSideProps } from "next";
+ import { useRouter } from 'next/router'
+
 
 interface AskQuestionProps {
   author: User;
@@ -33,6 +34,8 @@ const AskQuestion: NextPage<AskQuestionProps> = ({ author }) => {
       typeof value === "string" ? value.split(",") : value
     );
   };
+
+  const router=useRouter();
 
   return (
     <>
@@ -64,10 +67,13 @@ const AskQuestion: NextPage<AskQuestionProps> = ({ author }) => {
               className={styles.question}
             />
             <div className={styles.publishButtonContainer}>
-              <Link href={"/questions"}>
                 <button
                   className={styles.publishButton}
-                  onClick={() => addPostToDb(title, content, author, tag)}
+                  onClick={async () => {
+                    await addPostToDb(title, content, author, tag);
+                    router.push('/questions')
+                  }
+                }
                 >
                   <div className={styles.sendIconWrapper}>
                     <Image
@@ -80,7 +86,6 @@ const AskQuestion: NextPage<AskQuestionProps> = ({ author }) => {
                   </div>
                   <span className={styles.publish}> Publish</span>
                 </button>
-              </Link>
             </div>
           </div>
         </div>
